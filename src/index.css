@@ -1,0 +1,38 @@
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Outfit:wght@100..900&family=Tagesschrift&display=swap');
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceCustom {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.animate-bounceCustom {
+  animation: bounceCustom 2s infinite ease-in-out;
+}
+
+/* body{
+     font-family: "Libertinus Serif Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
