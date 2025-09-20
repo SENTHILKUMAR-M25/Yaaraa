@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaQuoteLeft } from "react-icons/fa";
-
+import Location from "./Location";
 const testimonials = [
   {
     name: "Aarav Sharma",
@@ -64,6 +64,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
+      <Location />
     </section>
   );
 };

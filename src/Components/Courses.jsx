@@ -4,6 +4,7 @@ import { X, Clock, Award, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import TrandingCourse from "./TrandingCourse";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -297,6 +298,7 @@ const Courses = () => {
           </motion.div>
         )}
       </AnimatePresence>
+  <TrandingCourse />
     </motion.section>
   );
 };

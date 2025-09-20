@@ -48,7 +48,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="max-w-lg mx-auto md:mx-0 text-gray-300 text-base sm:text-[25px]   "
-             style={{ fontFamily: "Libertinus Serif Display" }}
+            style={{ fontFamily: "Libertinus Serif Display" }}
           >
             Unlock your potential with world-class mentors, innovative courses,
             and hands-on learning experiences designed for the future.
