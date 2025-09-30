@@ -29,12 +29,12 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center text-white">
         {/* Left Section */}
-        <div className="space-y-8 text-center md:text-left">
+        <div className="space-y-10 text-center md:text-left">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl relative md:top-10 font-extrabold leading-tight"
             style={{ fontFamily: "Libertinus Serif Display, system-ui" }}
           >
             Learn From <br />

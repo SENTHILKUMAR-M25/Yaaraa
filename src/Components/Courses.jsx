@@ -174,7 +174,7 @@ const Courses = () => {
           }
           .swiper-button-prev {
             left: -2.5rem;
-          }                              
+          }                                   
           .swiper-button-next {    
             right: -2.5rem;
           }
