@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import TrandingCourse from "./TrandingCourse";
-
+import logo from '../assets/Yaaraa.png'
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -174,8 +174,8 @@ const Courses = () => {
           }
           .swiper-button-prev {
             left: -2.5rem;
-          }
-          .swiper-button-next {
+          }                              
+          .swiper-button-next {    
             right: -2.5rem;
           }
           .swiper-button-prev::after,
@@ -205,7 +205,7 @@ const Courses = () => {
             >
               {/* Banner */}
               <div className="h-32 sm:h-40 w-full overflow-hidden rounded-t-2xl relative">
-                <img src={selectedCourse.img} alt="banner" className="w-full h-full object-cover" />
+                <img src={selectedCourse.img} alt="banner" className="w-full h-[40vh] object-cover" />
                 <button
                   onClick={handleCloseModal}
                   className="absolute top-3 right-3 bg-white/80 rounded-full p-1.5 sm:p-2 shadow hover:bg-red-500 hover:text-white"
@@ -259,39 +259,92 @@ const Courses = () => {
                     </motion.button>
                   </>
                 ) : (
-                  <motion.form
-                    onSubmit={handleSubmit}
-                    className="space-y-4 sm:space-y-5"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 20, opacity: 0 }}
-                  >
-                    <h2 className="text-xl sm:text-2xl font-bold text-blue-600 text-center mb-3 sm:mb-4">
-                      Enrollment Form
-                    </h2>
-                    <div>
-                      <label className="block font-medium text-sm sm:text-base">Name</label>
-                      <input type="text" required className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <label className="block font-medium text-sm sm:text-base">Email</label>
-                      <input type="email" required className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <label className="block font-medium text-sm sm:text-base">Phone</label>
-                      <input type="tel" required className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base" />
-                    </div>
-                    <p className="text-gray-500 text-xs sm:text-sm">
-                      We’ll contact you within 24 hours after submission.
-                    </p>
-                    <motion.button
-                      type="submit"
-                      className="w-full px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg font-semibold shadow-md hover:from-green-700 hover:to-green-600 transition text-sm sm:text-base"
-                      whileTap={{ scale: 0.97 }}
-                    >
-                      ✅ Submit Enrollment
-                    </motion.button>
-                  </motion.form>
+                     <motion.form
+  onSubmit={handleSubmit}
+  className="space-y-4 sm:space-y-5"
+  initial={{ y: 20, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  exit={{ y: 20, opacity: 0 }}
+> 
+<div className='flex justify-center items-center gap-2 '>
+  <img src={logo} alt="" className="h-10 w-10" />
+  <h2 className="text-xl sm:text-2xl font-bold text-blue-600 text-center relative top-1 sm:mb-4">
+    Enrollment Form
+  </h2></div>
+
+  {/* Name */}
+  <div>
+    <label className="block font-medium text-sm sm:text-base">Name</label>
+    <input
+      type="text"
+      required
+      className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base"
+    />
+  </div>
+
+  {/* Email */}
+  <div>
+    <label className="block font-medium text-sm sm:text-base">Email</label>
+    <input
+      type="email"
+      required
+      className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base"
+    />
+  </div>
+
+  {/* Phone */}
+  <div>
+    <label className="block font-medium text-sm sm:text-base">Phone</label>
+    <input
+      type="tel"
+      required
+      className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base"
+    />
+  </div>
+
+  {/* Gender Dropdown */}
+  <div>
+    <label className="block font-medium text-sm sm:text-base">Gender</label>
+    <select
+      required
+      className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base"
+    >
+      <option value="">-- Select Gender --</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  {/* Current Status Dropdown */}
+  <div>
+    <label className="block font-medium text-sm sm:text-base">Current Status</label>
+    <select
+      required
+      className="w-full border rounded-lg px-3 sm:px-4 py-2 mt-1 bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base"
+    >
+      <option value="">-- Select Status --</option>
+      <option value="student">Student</option>
+      <option value="non-it">Non-IT</option>
+      <option value="jobseeker">Jobseeker</option>
+    </select>
+  </div>
+
+  {/* Info */}
+  <p className="text-gray-500 text-xs sm:text-sm">
+    We’ll contact you within 24 hours after submission.
+  </p>
+
+  {/* Submit Button */}
+  <motion.button
+    type="submit"
+    className="w-full px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg font-semibold shadow-md hover:from-green-700 hover:to-green-600 transition text-sm sm:text-base"
+    whileTap={{ scale: 0.97 }}
+  >
+     Submit Enrollment
+  </motion.button>
+</motion.form>
+
                 )}
               </div>
             </motion.div>
