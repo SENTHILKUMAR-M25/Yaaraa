@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import Footer from './Components/Pages/Footer'
+import Footer from './Components/Footer'
 import { Route, Routes, useLocation } from "react-router-dom";
 import HomePage from './Components/Pages/HomePage';
 import { AnimatePresence, motion } from 'framer-motion';
